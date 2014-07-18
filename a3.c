@@ -16,33 +16,82 @@ The first two cases can be found recursively. The last case can be found in line
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h> //fmax
 
-int divAndConMaxSubarray(int a[], int n)
+int divAndConMaxSubarray(int a[], int lo, int hi)
 {
-	int* sumArray = malloc(n * sizeof(int));
+	//int* sumArray = malloc((hi - lo) * sizeof(int)); //for storing winning array, 
+		//maybe don't need
 	
-	//base case, 1 or fewer elements in array
+	//midpoint of array
+	int midpoint;
+	
+	//max's found w/ div and conq
+	int leftMax=0;
+	int rightMax=0;
+
+	//max's found crossing middle iteratively
+	int bothMax=0;
+	int bothMaxLeft=0;
+	int bothMaxRight=0;
+
+	//counters
+	int i, sum;
+
+	//base case, only 1 element in array
+	//TODO: ensure no issue w/ no elements
+	if (lo==hi) { //lo and hi are the same element
+		return a[hi]; //sum is this element alone
+	}
 
 	//divide  array into two halves
+	midpoint = (lo + hi)/2;
 
 	//maximum of 
 
 		//maximum sum on left
 		//recursive call
 
+	
+	leftMax = divAndConMaxSubarray(a, lo, midpoint);
+
 		//max sum on right
 		//recursive call
+	
+	rightMax = divAndConMaxSubarray(a, midpoint+1, hi);
 
 		//max sum from midpoint
 			//find max going left
+
+	bothMaxLeft = 0;
+	sum = 0;
+	for (i = midpoint-1; i >=0; i-- ){
+		sum += a[i];
+		if (sum > bothMaxLeft)
+			bothMaxLeft = sum;
+	}
+	
 			//find max going right
+	bothMaxRight = 0;
+	sum = 0;
+	for (i = midpoint; i < hi; i++ ){
+		sum += a[i];
+		if (sum > bothMaxRight)
+			bothMaxRight = sum;
+	}
 			//combine
+	bothMax = bothMaxRight + bothMaxLeft;
 
+	printf("L = %d, R = %d, B = %d\n", leftMax, rightMax, bothMax);
 
+	return fmax(bothMax, fmax(leftMax, rightMax));
 }
 
 int main(){
 	int a[5] = {-1, 2, 3, 4, -5};
-	int n = 5;
-	divAndConMaxSubarray(a, n);
+	//int n = 5;
+	int max;
+	max = divAndConMaxSubarray(a, 0, 5);
+	printf("max = %d", max);
+	return 0;
 }
