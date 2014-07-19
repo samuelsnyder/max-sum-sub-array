@@ -22,21 +22,24 @@ Analysis
 - [x] a3.c analysis data collected
 
 Report
-- pseudocode
-- [ ] a1 pseudocode
-- [ ] a2 pseudocode
-- [ ] a3 pseudocode
+- Mathematical analys
+-  pseudocode
+- [x] a1 pseudocode
+- [x] a2 pseudocode
+- [x] a3 pseudocode
+- [x] asymptomatic run times
+- 
 
-- proofs
-- [ ] a1 proof
-- [ ] a2 proof
+- Theoretical correctness
 - [ ] a3 proof
 
-- plots
-- [ ] a1 plot
-- [ ] a2 plot
-- [ ] a3 plot
+- Testing
+- [ ] results of testing against document 
 
-- discussion
+- Experimental analysis
+- [x] plots 
+- [ ] what else?
+
+- Extrapolation and interpretation
 - [ ] biggest size arrays solvable in an hour
 - [ ] experimental results vs theoretical
