@@ -5,24 +5,21 @@ Algorithms
 
 - enumeration
 - [x] enumeration (a1.c) returns correct sum 
-- [ ] a1.c returns correct sum for test file
-- [ ] a1.c prints correct output
+- [x] a1.c returns correct sum for test file
 
 - better enum
 - [x] a2.c returns correct sum    
-- [ ] a2.c tested with test file
-- [ ] correct output printed
+- [x] a2.c tested with test file
 
 - div and conq 
 - [x] a3.c seems to return correct sum
-- [ ] a3.c tested with test file
-- [ ] correct output
+- [x] a3.c tested with test file
 
 
 Analysis
-- [ ] a1.c analysis data collected
-- [ ] a2.c analysis data collected
-- [ ] a3.c analysis data collected
+- [x] a1.c analysis data collected
+- [x] a2.c analysis data collected
+- [x] a3.c analysis data collected
 
 Report
 - pseudocode
