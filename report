@@ -1,0 +1,77 @@
+Maximum Subarray Project report
+
+1. Mathematical analysis
+
+1.1 Psuedocode
+
+1.1.1 Enumeration pseudocode
+
+enumeration(a: array of integers)
+	max = -infinity
+	n = length(a)
+		for i = 0 to n 
+			sum = 0
+			for j = i to n
+				for k = i to k = j
+					sum += a[n]
+						if sum > max
+							max = sum
+	return max
+
+1.1.2 Better enumeration pseudocode
+
+	betterEnumeration(a: array of integers)
+		max = -infinity
+		n = length(a)
+			for i = 0 to n
+				sum = 0
+				for j = i to j < n
+					sum += a[j]
+					if sum > max
+						max = sum
+	return max
+
+
+1.1.3 Divide and Conquer pseudocode
+
+divideAndConquer(a: array of integers, lo, hi)
+	
+	//base case
+	if lo == hi
+		return a[hi]
+
+	//recursive case
+	midpoint = (lo+hi)/2
+
+	//left side
+	leftMax = divideAndConquer(a, lo, midpoint)
+
+	//right side
+	rightMax = divideAndConquer(a, midpoint+1, hi)
+
+	//crossing both sides
+	//left side
+	leftBothMax = -infinity
+	for i = midpoint to i >= 0
+		leftBothSum += a[i]
+		if leftBothSum > leftBothMax
+			leftBothMax = leftBothSum
+	//right side
+	rightBothMax = -infinity
+	for i = midpoint to i >= 0
+		rightBothSum += a[i]
+		if rightBothSum > rightBothMax
+			rightBothMax = rightBothSum
+
+	bothMax = leftBothMax + rightBothMax
+
+	return max(bothMax, leftMax, rightMax)
+
+
+2. Theoretical correctness
+
+3. Testing
+
+4. Experimental analysis
+
+5. Extrapolation and interpretation
