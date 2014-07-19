@@ -28,7 +28,6 @@ Report
 - [x] a2 pseudocode
 - [x] a3 pseudocode
 - [x] asymptomatic run times
-- 
 
 - Theoretical correctness
 - [ ] a3 proof
