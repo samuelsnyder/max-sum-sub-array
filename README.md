@@ -22,7 +22,8 @@ Analysis
 - [x] a3.c analysis data collected
 
 Report
-- Mathematical analys
+- Mathematical analysis
+- 
 -  pseudocode
 - [x] a1 pseudocode
 - [x] a2 pseudocode
@@ -33,12 +34,12 @@ Report
 - [ ] a3 proof
 
 - Testing
-- [ ] results of testing against document 
+- [x] results of testing against document 
 
 - Experimental analysis
 - [x] plots 
 - [ ] what else?
 
 - Extrapolation and interpretation
-- [ ] biggest size arrays solvable in an hour
+- [x] biggest size arrays solvable in an hour
 - [ ] experimental results vs theoretical
