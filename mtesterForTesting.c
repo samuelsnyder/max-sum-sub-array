@@ -25,7 +25,6 @@ int main(){
     
     //all mtester data
     
-    
     resultArr[0] = 239;
     resultArr[1] = 322;
     resultArr[2] = 305;
@@ -60,7 +59,7 @@ int main(){
     
 	//testing enumeration
 	printf("enumeration\n");
-	printf("elements\ttime\tsum\tcorrect\n");
+	printf("Test#\ttime\tsum\tcorrect\n");
 	char result;
     for (i = 0; i < 9; i++){
 		start = clock();
@@ -69,12 +68,12 @@ int main(){
 		clockTime = ((double) (end - start))/CLOCKS_PER_SEC;
         if (sum == resultArr[i]) result = 'Y';
         else result = 'N';
-		printf("%d\t%f\t%d\t%c\n",numElements[i], clockTime, sum, result );
+		printf("%d\t%f\t%d\t%c\n",i+1, clockTime, sum, result );
 	}
     
 	//testing better enumeration
 	printf("\n\nbetter enumeration\n");
-	printf("elements\ttime\tsum\tcorrect\n");
+	printf("Test#\ttime\tsum\tcorrect\n");
 	for (i = 0; i < 9; i++){
 		start = clock();
 		sum = betterEnumMaxSubarray(testArr[i], 100);
@@ -82,12 +81,12 @@ int main(){
 		clockTime = ((double) (end - start))/CLOCKS_PER_SEC;
         if (sum == resultArr[i]) result = 'Y';
         else result = 'N';
-		printf("%d\t%f\t%d\t%c\n",numElements[i], clockTime, sum, result );
+		printf("%d\t%f\t%d\t%c\n",i+1, clockTime, sum, result );
 	}
 
 	//testing divide and conquer
 	printf("\n\ndivide and conquer\n");
-	printf("elements\ttime\tsum\tcorrect\n");
+	printf("Test#\ttime\tsum\tcorrect\n");
 	for (i = 0; i < 9; i++){
 		start = clock();
 		sum = divAndConMaxSubarray(testArr[i],0, 100);
@@ -95,7 +94,7 @@ int main(){
 		clockTime = ((double) (end - start))/CLOCKS_PER_SEC;
 		if (sum == resultArr[i]) result = 'Y';
         else result = 'N';
-		printf("%d\t%f\t%d\t%c\n",numElements[i], clockTime, sum, result );
+		printf("%d\t%f\t%d\t%c\n",i+1, clockTime, sum, result );
 	}
     
     
