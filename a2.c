@@ -41,14 +41,3 @@ int betterEnumMaxSubarray(int a[], int n){
 	}
 	return best;
 }
-
-int main(){
-
-	int testArray[5] = {-1,2, 3, 4, -5};
-	int length = 5;
-	int sum = 0;
-	sum = betterEnumMaxSubarray(testArray, length);
-	printf("sum = %d", sum);
-
-	return 0;
-}

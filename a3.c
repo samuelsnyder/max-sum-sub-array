@@ -82,16 +82,5 @@ int divAndConMaxSubarray(int a[], int lo, int hi)
 			//combine
 	bothMax = bothMaxRight + bothMaxLeft;
 
-	printf("L = %d, R = %d, B = %d\n", leftMax, rightMax, bothMax);
-
 	return fmax(bothMax, fmax(leftMax, rightMax));
-}
-
-int main(){
-	int a[5] = {-1, 2, 3, 4, -5};
-	//int n = 5;
-	int max;
-	max = divAndConMaxSubarray(a, 0, 5);
-	printf("max = %d", max);
-	return 0;
 }
